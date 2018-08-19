@@ -1,0 +1,24 @@
+.splash-screen
+    background: url(assets/imgs/tapume.jpg) center center / cover no-repeat black
+    color: white
+    @extend .flex
+    flex-flow: column wrap 
+    justify-content: center
+    min-height: 100vh
+    width: 100%
+    h1
+        +mq(837px, min)
+            +animation(left-to-right, 1000ms)
+        &.title 
+            +rem('font-size', 32px)
+            >span 
+                color: $teal
+    h2 
+        +mq(837px, min)
+            +animation(left-to-right, 1500ms)        
+        &.title
+            +rem('font-size', 50px)
+            margin: 70px 0 15px
+            +mq(568px, max)
+                margin: 25px 0 15px
+            text-transform: uppercase

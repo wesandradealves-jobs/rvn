@@ -1,0 +1,39 @@
+.newsletter
+    +mq(837px, min)
+        +animation(opacity, 2500ms)
+    +mq(568px, max)
+        text-align: center
+    >.form-group
+        align-items: stretch 
+        @extend .flex
+        flex-flow: row wrap 
+        justify-content: space-between
+        +mq(568px, max)
+            margin: 0 auto
+        max-width: 360px
+        >span
+            position: relative
+            label
+                &.error
+                    bottom: -22px
+                    color: coral
+                    +rem('font-size', 12px)
+                    left: 0
+                    position: absolute 
+            input,
+            button
+                border: 0
+                +rem('font-size', 14px)
+                padding: 6px 12px
+                width: 100%
+            &:first-child
+                flex: 1
+            &:last-child
+                flex: 0 0 auto
+                width: 150px
+                button 
+                    background-color: $teal 
+                    color: white
+                    cursor: pointer
+                    &:hover
+                        background-color: lighten($teal, 5%)
