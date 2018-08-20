@@ -11,14 +11,28 @@
             +animation(left-to-right, 1000ms)
         &.title 
             +rem('font-size', 32px)
+            +mq(568px, max)
+                +rem('font-size', 28px)
             >span 
                 color: $teal
     h2 
         +mq(837px, min)
-            +animation(left-to-right, 1500ms)        
+            +animation(left-to-right, 1500ms)  
+        &.logo 
+            width: 100%
+            +mq(837px, min)
+                +animation(opacity, 1500ms)
+                >img 
+                    display: block 
+                    max-width: 280px
+                    +mq(568px, max)
+                        margin: 0 auto 
+                        max-width: 120px
+                    width: 100%          
         &.title
             +rem('font-size', 50px)
             margin: 70px 0 15px
             +mq(568px, max)
+                +rem('font-size', 40px)
                 margin: 25px 0 15px
             text-transform: uppercase
